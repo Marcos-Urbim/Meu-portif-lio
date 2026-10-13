@@ -1,0 +1,324 @@
+```css
+/* Seleciona todos os elementos da página. */
+* {
+    /* Remove a margem padrão dos elementos. */
+    margin: 0;
+    /* Remove o espaçamento interno padrão dos elementos. */
+    padding: 0;
+    /* Faz largura e altura incluírem bordas e padding. */
+    box-sizing: border-box;
+}
+
+/* Define o fundo e as configurações gerais da página. */
+html, body {
+    /* Ocupa toda a largura disponível. */
+    width: 100%;
+    /* Garante pelo menos a altura total da tela. */
+    min-height: 100vh;
+    /* Define a cor de fundo escura. */
+    background-color: #0b0e14;
+    /* Define a cor padrão dos textos. */
+    color: #e6edf3;
+    /* Define a fonte principal da página. */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Cria uma linha colorida de destaque no topo. */
+.top-bar {
+    /* Define a altura da barra. */
+    height: 4px;
+    /* Cria um degradê horizontal azul, preto e branco. */
+    background: linear-gradient(90deg, #00a8ff 0%, black, white);
+    /* Faz a barra ocupar toda a largura. */
+    width: 100%;
+}
+
+/* Define o container principal da página. */
+.wrapper {
+    /* Limita a largura máxima do conteúdo. */
+    max-width: 1000px;
+    /* Centraliza o container horizontalmente. */
+    margin: 0 auto;
+    /* Adiciona espaçamento interno. */
+    padding: 3rem 1.5rem;
+    /* Ativa o Flexbox. */
+    display: flex;
+    /* Organiza os elementos verticalmente. */
+    flex-direction: column;
+    /* Centraliza os elementos horizontalmente. */
+    align-items: center;
+}
+
+/* Define o estilo da imagem de avatar. */
+.avatar-circle {
+    /* Define a largura da imagem. */
+    width: 130px !important;
+    /* Define a altura da imagem. */
+    height: 130px !important;
+    /* Transforma a imagem em um círculo perfeito. */
+    border-radius: 50% !important;
+    /* Faz a imagem preencher o espaço sem deformar. */
+    object-fit: cover !important;
+    /* Adiciona uma borda azul ao redor da imagem. */
+    border: 3px solid #00a8ff !important;
+    /* Cria um brilho azul ao redor do avatar. */
+    box-shadow: 0 0 20px rgba(0, 168, 255, 0.6) !important;
+    /* Faz a imagem se comportar como bloco. */
+    display: block !important;
+    /* Centraliza a imagem e adiciona espaço abaixo dela. */
+    margin: 0 auto 1.5rem auto !important;
+}
+
+/* Define a área onde ficará o botão de contato. */
+.contact-area {
+    /* Adiciona espaço acima da área. */
+    margin-top: 2rem;
+    /* Centraliza o conteúdo. */
+    text-align: center;
+    /* Faz a área ocupar toda a largura disponível. */
+    width: 100%;
+}
+
+/* Define o estilo normal e visitado do botão de contato. */
+.btn-contact,
+.btn-contact:visited {
+    /* Permite controlar largura, altura e espaçamento do botão. */
+    display: inline-block;
+    /* Define o fundo azul do botão. */
+    background-color: #00a8ff !important;
+    /* Define a cor escura do texto. */
+    color: #0b0e14 !important;
+    /* Deixa o texto em negrito. */
+    font-weight: 700;
+    /* Define o tamanho da fonte. */
+    font-size: 1rem;
+    /* Define o espaçamento interno do botão. */
+    padding: 0.8rem 2rem;
+    /* Arredonda os cantos do botão. */
+    border-radius: 8px;
+    /* Remove o sublinhado do link. */
+    text-decoration: none !important;
+    /* Cria uma animação suave nas mudanças. */
+    transition: all 0.3s ease;
+    /* Adiciona um brilho azul ao botão. */
+    box-shadow: 0 0 15px rgba(0, 168, 255, 0.4);
+}
+
+/* Define o efeito quando o mouse passa sobre o botão. */
+.btn-contact:hover {
+    /* Muda o fundo para branco. */
+    background-color: #ffffff !important;
+    /* Muda o texto para azul. */
+    color: #00a8ff !important;
+    /* Move o botão levemente para cima. */
+    transform: translateY(-3px);
+    /* Aumenta o brilho do botão. */
+    box-shadow: 0 0 25px rgba(0, 168, 255, 0.8);
+}
+
+/* Define o estilo do título principal. */
+.title {
+    /* Define o tamanho grande do título. */
+    font-size: 2.8rem;
+    /* Deixa o título bastante espesso. */
+    font-weight: 800;
+    /* Define a cor branca. */
+    color: #ffffff;
+    /* Centraliza o título. */
+    text-align: center;
+    /* Adiciona um brilho azul ao texto. */
+    text-shadow: 0 0 15px rgba(0, 168, 255, 0.5);
+    /* Adiciona espaço abaixo do título. */
+    margin-bottom: 0.5rem;
+}
+
+/* Define o estilo do subtítulo. */
+.subtitle {
+    /* Define a cor azul do subtítulo. */
+    color: #00a8ff;
+    /* Define o tamanho da fonte. */
+    font-size: 1rem;
+    /* Deixa o texto mais forte. */
+    font-weight: 600;
+    /* Aumenta o espaçamento entre as letras. */
+    letter-spacing: 2px;
+    /* Transforma as letras em maiúsculas. */
+    text-transform: uppercase;
+    /* Adiciona bastante espaço abaixo do subtítulo. */
+    margin-bottom: 3rem;
+    /* Centraliza o texto. */
+    text-align: center;
+}
+
+/* Cria uma grade para os cards de informações. */
+.grid-info {
+    /* Ativa o sistema de Grid. */
+    display: grid;
+    /* Cria colunas automáticas de no mínimo 320px. */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* Define o espaço entre os cards. */
+    gap: 1.5rem;
+    /* Faz a grade ocupar toda a largura disponível. */
+    width: 100%;
+}
+
+/* Define o estilo dos cards de informação. */
+.box {
+    /* Define o fundo do card. */
+    background-color: #161b22;
+    /* Adiciona uma borda cinza escura. */
+    border: 1px solid #30363d;
+    /* Arredonda os cantos do card. */
+    border-radius: 12px;
+    /* Adiciona espaço interno. */
+    padding: 1.8rem;
+    /* Cria uma transição suave para a borda. */
+    transition: border-color 0.3s;
+}
+
+/* Define o efeito do card ao passar o mouse. */
+.box:hover {
+    /* Muda a borda para azul. */
+    border-color: #00a8ff;
+}
+
+/* Define o título dentro dos cards. */
+.box-title {
+    /* Define o tamanho do título. */
+    font-size: 1.2rem;
+    /* Define a cor azul. */
+    color: #00a8ff;
+    /* Adiciona espaço abaixo do título. */
+    margin-bottom: 1.2rem;
+    /* Cria uma linha abaixo do título. */
+    border-bottom: 1px solid #30363d;
+    /* Adiciona espaço entre o texto e a linha. */
+    padding-bottom: 0.5rem;
+    /* Ativa o Flexbox. */
+    display: flex;
+    /* Centraliza verticalmente os elementos. */
+    align-items: center;
+    /* Cria espaço entre ícones e texto. */
+    gap: 0.5rem;
+}
+
+/* Remove os marcadores padrão das listas de informações. */
+.info-list {
+    /* Remove as bolinhas da lista. */
+    list-style: none;
+}
+
+/* Define o estilo de cada item da lista. */
+.info-list li {
+    /* Adiciona espaçamento vertical. */
+    padding: 0.7rem 0;
+    /* Cria uma linha separadora entre os itens. */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    /* Ativa o Flexbox. */
+    display: flex;
+    /* Coloca o título de um lado e o valor do outro. */
+    justify-content: space-between;
+    /* Define o tamanho do texto. */
+    font-size: 0.95rem;
+}
+
+/* Remove a borda do último item da lista. */
+.info-list li:last-child {
+    /* Remove a linha inferior do último item. */
+    border-bottom: none;
+}
+
+/* Define o estilo dos textos em negrito da lista. */
+.info-list strong {
+    /* Usa uma cor cinza para destacar os rótulos. */
+    color: #8b949e;
+}
+
+/* Define o estilo dos valores da lista. */
+.info-list span {
+    /* Define os valores como brancos. */
+    color: #ffffff;
+    /* Deixa os valores em negrito. */
+    font-weight: 600;
+}
+
+/* Cria a área onde ficam as tags de hobbies. */
+.hobbies-tags {
+    /* Ativa o Flexbox. */
+    display: flex;
+    /* Permite que as tags quebrem para outra linha. */
+    flex-wrap: wrap;
+    /* Define o espaço entre as tags. */
+    gap: 0.6rem;
+}
+
+/* Define o estilo individual das tags. */
+.tag {
+    /* Define o fundo escuro das tags. */
+    background-color: #0d1117;
+    /* Adiciona uma borda cinza. */
+    border: 1px solid #30363d;
+    /* Define a cor do texto. */
+    color: #e6edf3;
+    /* Adiciona espaço interno. */
+    padding: 0.6rem 1rem;
+    /* Arredonda os cantos. */
+    border-radius: 8px;
+    /* Define o tamanho da fonte. */
+    font-size: 0.9rem;
+    /* Deixa o texto levemente mais forte. */
+    font-weight: 500;
+}
+
+/* Define o estilo do rodapé. */
+.footer {
+    /* Adiciona bastante espaço acima do rodapé. */
+    margin-top: 4rem;
+    /* Define uma cor cinza escura. */
+    color: #484f58;
+    /* Define o tamanho pequeno do texto. */
+    font-size: 0.85rem;
+    /* Centraliza o texto. */
+    text-align: center;
+}
+
+/* Define o bloco de apresentação pessoal. */
+.about-box {
+    /* Define o fundo do bloco. */
+    background-color: #161b22;
+    /* Adiciona uma borda cinza. */
+    border: 1px solid #30363d;
+    /* Cria uma borda azul mais grossa no lado esquerdo. */
+    border-left: 4px solid #00a8ff;
+    /* Arredonda os cantos. */
+    border-radius: 10px;
+    /* Define o espaçamento interno. */
+    padding: 1.2rem 1.8rem;
+    /* Limita a largura máxima do bloco. */
+    max-width: 700px;
+    /* Permite ocupar toda a largura disponível até o limite. */
+    width: 100%;
+    /* Centraliza o bloco e adiciona espaço abaixo. */
+    margin: 0 auto 2.5rem auto;
+    /* Centraliza o texto. */
+    text-align: center;
+    /* Adiciona uma sombra abaixo do bloco. */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Define o estilo dos parágrafos dentro do bloco de apresentação. */
+.about-box p {
+    /* Define a cor do texto. */
+    color: #e6edf3;
+    /* Define o tamanho da fonte. */
+    font-size: 1.05rem;
+    /* Define o espaçamento entre as linhas. */
+    line-height: 1.6;
+}
+
+/* Define o estilo dos textos em negrito na apresentação. */
+.about-box strong {
+    /* Destaca os textos importantes em azul. */
+    color: #00a8ff;
+}
+```
